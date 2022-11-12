@@ -21,15 +21,15 @@
                   </ul>
                 </li>
                 <li><a href="#about" class="cs-smoth_scroll">About</a></li>
-                <li><a href="#roadmap" class="cs-smoth_scroll">Roadmap</a></li>
-                <li><a href="#team" class="cs-smoth_scroll">Team</a></li>
+                {{-- <li><a href="#roadmap" class="cs-smoth_scroll">Roadmap</a></li> --}}
+                {{-- <li><a href="#team" class="cs-smoth_scroll">Team</a></li> --}}
                 <li><a href="#faq" class="cs-smoth_scroll">FAQ</a></li>
-                <li class="menu-item-has-children"><a href="#">Pages</a>
+                {{-- <li class="menu-item-has-children"><a href="#">Pages</a>
                   <ul>
                     <li><a href="blog.html">Blog Page</a></li>
                     <li><a href="blog-details.html">Blog Details</a></li>
                   </ul>
-                </li>
+                </li> --}}
               </ul>
             </div>
           </div>
