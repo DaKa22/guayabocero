@@ -14,16 +14,16 @@
 
     <div class="cs-height_70 cs-height_lg_45"></div>
 
-    @include('pages.home.partials.slider')
+    {{-- @include('pages.home.partials.slider') --}}
 
-    <div class="cs-height_90 cs-height_lg_65"></div>
+    {{-- <div class="cs-height_90 cs-height_lg_65"></div> --}}
 
-    @include('pages.home.partials.counter')
+    {{-- @include('pages.home.partials.counter') --}}
 
-    <div class="cs-height_65 cs-height_lg_35"></div>
+    {{-- <div class="cs-height_65 cs-height_lg_35"></div> --}}
 
-    @include('pages.home.partials.steps')
-    @include('pages.home.partials.team')
-    @include('pages.home.partials.goals')
+    {{-- @include('pages.home.partials.steps') --}}
+    {{-- @include('pages.home.partials.team') --}}
+    {{-- @include('pages.home.partials.goals') --}}
     @include('pages.home.partials.faq')
 @endsection
