@@ -4,11 +4,13 @@
         <div class="cs-main_header_in">
           <div class="cs-main_header_left">
             <a class="cs-site_branding cs-accent_color" href="">
-              <img src="{{ asset('assets/img/logo.svg') }}" alt="Logo" class="cs-hide_dark">
-              <img src="{{ asset('assets/img/logo_white.svg') }}" alt="Logo" class="cs-hide_white">
+              <img src="{{ asset('img/logo-white.png') }}" alt="Logo" class="cs-hide_dark">
+              <img src="{{ asset('img/logo-white.png') }}" alt="Logo" class="cs-hide_white">
+              {{-- <img src="{{ asset('assets/img/logo.svg') }}" alt="Logo" class="cs-hide_dark"> --}}
+              {{-- <img src="{{ asset('assets/img/logo_white.svg') }}" alt="Logo" class="cs-hide_white"> --}}
             </a>
           </div>
-          <div class="cs-main_header_center">
+          <div class="cs-main_header_right">
             <div class="cs-nav">
               <ul class="cs-nav_list">
                 <li class="menu-item-has-children"><a href="#home" class="cs-smoth_scroll">Home</a>
@@ -31,7 +33,7 @@
               </ul>
             </div>
           </div>
-          <div class="cs-main_header_right">
+          {{-- <div class="cs-main_header_right">
             <div class="cs-toolbox">
               <span class="cs-icon_btn cs-mode_btn">
                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 64 64" class="cs-hide_dark"><path fill="currentColor" d="M43.139 2a29.885 29.885 0 0 1 5.121 16.756c0 16.701-13.686 30.24-30.57 30.24a30.656 30.656 0 0 1-15.689-4.285C7.209 54.963 17.93 62 30.318 62C47.816 62 62 47.969 62 30.66C62 17.867 54.246 6.871 43.139 2z"/></svg>
@@ -48,7 +50,7 @@
                 <span>Connect</span>
               </span>
             </div>
-          </div>
+          </div> --}}
         </div>
       </div>
     </div>

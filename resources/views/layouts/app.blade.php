@@ -13,6 +13,7 @@
 </head>
 
 <body class="cs-dark">
+  @include('partials.header')
   @yield('content')
   <div class="cs-height_75 cs-height_lg_45"></div>
   @include('partials.footer')

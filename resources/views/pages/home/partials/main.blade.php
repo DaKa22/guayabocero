@@ -1,4 +1,4 @@
-<section class="cs-hero cs-style1 cs-bg" data-src="{{ asset('assets/img/hero_bg.jpeg') }}" id="home">
+<section class="cs-hero cs-style1 cs-bg" data-src="{{ asset('img/banner-main.jpg') }}" id="home">
     <div class="cs-dark_overlay"></div>
     <div class="container">
       <div class="cs-hero_text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.35s">
@@ -12,9 +12,9 @@
         Mint is Live Until <span class="cs-accent_color">22 July</span></h3>
       </div>
       <div class="cs-hero_img wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
-        <img src="{{ asset('assets/img/hero_img.svg') }}" alt="Hero Image">
+        {{-- <img src="https://thehangoverclub.com.co/thehangoweb/uploads/2019/02/drips.png" alt="Hero Image" style="width: 30rem"> --}}
         <div class="cs-hero_img_sm">
-          <img src="{{ asset('assets/img/hero_img_sm.png') }}" alt="Hero Image">
+          {{-- <img src="{{ asset('img/logo.png') }}" alt="Hero Image"> --}}
         </div>
       </div>
     </div>
