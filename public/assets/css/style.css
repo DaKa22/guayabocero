@@ -2259,7 +2259,7 @@ ul.cs-list.cs-style2 li:not(:last-child) {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 80px;
+  height: 110px;
   position: relative;
 }
 
@@ -2925,7 +2925,7 @@ li.menu-item-has-children
 .cs-hero.cs-style1 {
   position: relative;
   padding: 70px 0;
-  min-height: 850px;
+  min-height: 600px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
