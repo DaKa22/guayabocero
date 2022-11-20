@@ -6,12 +6,13 @@
   --color-dark: #000117;
   --color-gray: #29292b;
   --color-white: #fff;
+  --color-background: #e1e1e1;
 }
-
 html {
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
+  background-color: var(--color-background);
 }
 
 *, *:before, *:after {
@@ -72,7 +73,6 @@ section.banner-main {
   background-size: cover;
   min-height: 500px;
   position: relative;
-  
 }
 
 section.banner-main .content-bottom-left {
@@ -178,3 +178,86 @@ section.banner-secondary .grid aside .body span {
 
 
 /* End Banner Secondary */
+
+/* Start About Us */
+
+section.about-us {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  section.about-us .header {
+    margin: auto;
+    max-width: 25.7rem;
+    font-weight: 500;
+    text-align: justify;
+    padding-bottom: 2rem;
+    color: var(--color-dark);
+  }
+
+  section.about-us .header span {
+    color: var(--color-magenta);
+  }
+
+  section.about-us .grid {
+    padding-top: 8rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  section.about-us .grid aside {
+    padding-right: 7rem;
+    max-width: 34.5rem;
+  }
+
+  section.about-us .grid aside .title {
+    font-weight: 800;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: end;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  section.about-us .grid aside .body {
+    text-align: justify;
+  }
+
+  section.about-us .grid aside .body span {
+    color: var(--color-magenta);
+    font-weight: 500;
+    font-size: 19px;
+  }
+
+
+
+/* End About Us */
+
+
+/* Start WhatsApp */
+.float{
+	position:fixed;
+	width:95px;
+	height:95px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:60px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+.float:hover {
+	text-decoration: none;
+	color: #25d366;
+  background-color:#fff;
+}
+
+.my-float{
+	margin-top:16px;
+}
+
+
+/* End WhatsApp */

@@ -6,4 +6,6 @@
     @include('pages.partials.header')
     @include('pages.partials.banner-main')
     @include('pages.partials.banner-secondary')
+    @include('pages.partials.about-us')
+
 @endsection
