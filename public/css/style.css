@@ -8,6 +8,7 @@
   --color-white: #fff;
   --color-background: #e1e1e1;
 }
+
 html {
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
@@ -15,7 +16,9 @@ html {
   background-color: var(--color-background);
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -28,7 +31,8 @@ body {
   margin: 0;
 }
 
-img, embed {
+img,
+embed {
   width: 100%;
 }
 
@@ -36,228 +40,3 @@ img, embed {
   text-align: center;
 }
 
-/* Start Header */
-
-.logo {
-  width: 6rem;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  padding-top:    2rem;
-  padding-bottom: 1rem;
-  padding-left:   3rem;
-  padding-right:  3rem;
-}
-
-header .navigation {
-  display: flex;
-  gap: 1rem;
-}
-
-header .navigation a {
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
-header .navigation a.active {
-  color: var(--color-pink);
-}
-
-/* End Header */
-
-/* Start Banner Main */
-section.banner-main {
-  background-size: cover;
-  min-height: 500px;
-  position: relative;
-}
-
-section.banner-main .content-bottom-left {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  color: var(--color-white);
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-bottom: 2rem;
-  transform: rotate(-3deg);
-  font-size: 2rem;
-  text-transform: uppercase;
-  font-weight: 500;
-}
-
-section.banner-main .content-bottom-left .bg-dark {
-  position: relative;
-  padding-left: 4rem;
-  color: var(--color-white);
-}
-
-section.banner-main .content-bottom-left .bg-dark::after {
-  content: 'a';
-  color: transparent;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: var(--color-dark);
-  width: 21rem;
-  z-index: -1;
-}
-
-section.banner-main .content-bottom-left .bg-magenta {
-  background-color: var(--color-magenta);
-  color: var(--color-white);
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-section.banner-main .content-bottom-left .arrow {
-  position: relative;
-}
-
-section.banner-main .content-bottom-left .arrow img {
-  position: absolute;
-  width: 2rem;
-  top: -5px;
-  left: 3rem;
-}
-/* End Banner Main */
-
-/* Start Banner Secondary */
-
-section.banner-secondary {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
-section.banner-secondary .header {
-  margin: auto;
-  max-width: 25.7rem;
-  font-weight: 500;
-  text-align: justify;
-  padding-bottom: 2rem;
-  color: var(--color-dark);
-}
-
-section.banner-secondary .header span {
-  color: var(--color-magenta);
-}
-
-section.banner-secondary .grid {
-  padding-top: 8rem;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-section.banner-secondary .grid aside {
-  padding-right: 7rem;
-  max-width: 34.5rem;
-}
-
-section.banner-secondary .grid aside .title {
-  font-weight: 800;
-  font-size: 2rem;
-  text-transform: uppercase;
-  text-align: end;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-section.banner-secondary .grid aside .body {
-  text-align: justify;
-}
-
-section.banner-secondary .grid aside .body span {
-  color: var(--color-gray);
-  font-weight: 500;
-  font-size: 19px;
-}
-
-
-
-/* End Banner Secondary */
-
-/* Start About Us */
-
-section.about-us {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
-
-  section.about-us .header {
-    margin: auto;
-    max-width: 25.7rem;
-    font-weight: 500;
-    text-align: justify;
-    padding-bottom: 2rem;
-    color: var(--color-dark);
-  }
-
-  section.about-us .header span {
-    color: var(--color-magenta);
-  }
-
-  section.about-us .grid {
-    padding-top: 8rem;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  section.about-us .grid aside {
-    padding-right: 7rem;
-    max-width: 34.5rem;
-  }
-
-  section.about-us .grid aside .title {
-    font-weight: 800;
-    font-size: 2rem;
-    text-transform: uppercase;
-    text-align: end;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-
-  section.about-us .grid aside .body {
-    text-align: justify;
-  }
-
-  section.about-us .grid aside .body span {
-    color: var(--color-magenta);
-    font-weight: 500;
-    font-size: 19px;
-  }
-
-
-
-/* End About Us */
-
-
-/* Start WhatsApp */
-.float{
-	position:fixed;
-	width:95px;
-	height:95px;
-	bottom:40px;
-	right:40px;
-	background-color:#25d366;
-	color:#FFF;
-	border-radius:50px;
-	text-align:center;
-  font-size:60px;
-	box-shadow: 2px 2px 3px #999;
-  z-index:100;
-}
-.float:hover {
-	text-decoration: none;
-	color: #25d366;
-  background-color:#fff;
-}
-
-.my-float{
-	margin-top:16px;
-}
-
-
-/* End WhatsApp */
