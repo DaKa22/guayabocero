@@ -1,6 +1,6 @@
 <header class="header">
   <div class="logo">
-    <img src="{{ asset('img/logo.png') }}" alt="">
+    <img src="{{ asset('img/logo.svg') }}" alt="">
   </div>
   <div class="navigation">
     @foreach ($navigation as $navigation)
