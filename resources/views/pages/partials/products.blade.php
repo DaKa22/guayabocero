@@ -4,7 +4,7 @@
     <img src="{{ asset('img/text-guayabo-2.svg') }}" alt="">
   </h1>
   <p class="sub-title">
-    Cada persona sufre la cruda de forma diferente. Por eso tenemos varias opcines para los síntomas que puedas tener.
+    Cada persona padece el guayabo de diferente forma. Por eso tenemos varias opcines para los síntomas que puedas tener.
   </p>
 
   @php
@@ -28,7 +28,7 @@
         <div class="body">
           {{ $product['description'] }}
         </div>
-        <div 
+        <div
           class="image"
           style="background-image: url({{ $product['image'] }})"
         ></div>
@@ -76,7 +76,7 @@
       max-width: 50rem;
       font-size: 1.3rem;
     }
-    
+
     section.products .grid {
       padding-top: 4rem;
       padding-left:  6rem;

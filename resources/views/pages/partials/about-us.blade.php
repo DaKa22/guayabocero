@@ -15,7 +15,7 @@
 
         El consumo de alcohol es una costumbre social, que en ocasiones se pueden transformar en un problema de salud…
         <br>
-        <span>“Guayabo Cero </span> es un grupo que alivia el guayabo y nos esforzamos para brindarte un excelente
+        <span>“Guayabo Cero </span> es un grupo orientador que alivia el guayabo y nos esforzamos para brindarte un excelente
         servicio de la mejor
         calidad y facilidad hasta tu <span>hogar”</span>.
 
