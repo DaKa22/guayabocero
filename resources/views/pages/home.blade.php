@@ -49,5 +49,6 @@
   @include('pages.partials.about-us')
   @include('pages.partials.products')
   @include('pages.partials.resenas')
+  @include('pages.partials.contact')
   @include('pages.partials.whatsapp')
 @endsection

@@ -29,8 +29,8 @@
       padding-left: 2rem;
       padding-right: 2rem;
       padding-bottom: 2rem;
-      transform: rotate(-3deg);
-      font-size: 2rem;
+      transform: rotate(-25deg);
+      font-size: 3rem;
       text-transform: uppercase;
       font-weight: 500;
     }
@@ -48,7 +48,7 @@
       top: 0;
       left: 0;
       background-color: var(--color-dark);
-      width: 21rem;
+      width: 31rem;
       z-index: -1;
     }
 
@@ -61,6 +61,7 @@
 
     section.banner-main .content-bottom-left .arrow {
       position: relative;
+      display: none;
     }
 
     section.banner-main .content-bottom-left .arrow img {

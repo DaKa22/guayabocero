@@ -64,12 +64,13 @@
 
     section.about-us .grid aside {
       padding-right: 7rem;
-      max-width: 34.5rem;
+      max-width: 60rem;
+      margin-left: auto;
     }
 
     section.about-us .grid aside .title {
       font-weight: 800;
-      font-size: 2rem;
+      font-size: 3rem;
       text-transform: uppercase;
       text-align: end;
       padding-top: 1rem;
@@ -78,12 +79,14 @@
 
     section.about-us .grid aside .body {
       text-align: justify;
+      font-size: 1.3rem;
     }
 
     section.about-us .grid aside .body span {
       color: var(--color-magenta);
       font-weight: 500;
       font-size: 19px;
+      font-size: 1.4rem;
     }
 
     section.about-us .gallery {

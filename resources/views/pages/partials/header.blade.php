@@ -34,6 +34,7 @@
     header.header .navigation {
       display: flex;
       gap: 1rem;
+      font-size: 1.3rem;
     }
 
     header.header .navigation a {

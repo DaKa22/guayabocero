@@ -23,11 +23,12 @@
 
     section.banner-secondary .header {
       margin: auto;
-      max-width: 25.7rem;
+      max-width: 52rem;
       font-weight: 500;
       text-align: justify;
       padding-bottom: 2rem;
       color: var(--color-dark);
+      font-size: 2rem;
     }
 
     section.banner-secondary .header span {
