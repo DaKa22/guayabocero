@@ -3,7 +3,8 @@
 @section('title', 'Home')
 
 @php
-  $telefono = '3057594692';
+//   $telefono = '3222266461'; //TEST
+  $telefono = '3163339407'; //PROD
   $mensaje = '%20Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n.';
   $navigation = [
     [
@@ -28,14 +29,14 @@
     ],
     [
       'name' => 'Reseñas',
-      'route' => route('home').'#reseñas',
+      'route' => route('home').'#resenas',
       'active' => false,
       'vinculo_externo' =>false,
 
     ],
     [
       'name' => 'Contacto',
-      'route' => "https://api.whatsapp.com/send?phone=%2B57$telefono&text=$mensaje&type=phone_number&app_absent=1",
+      'route' => "https://api.whatsapp.com/send?phone=%2B57$telefono&text=$mensaje&type=phone_number&app_absent=0",
       'active' => false,
       'vinculo_externo' => true,
     ],

@@ -1,4 +1,4 @@
-<section class="products">
+<section class="products" id="paquetes">
   <h1>
     <span>Paquetes para el </span>
     <img src="{{ asset('img/text-guayabo-2.svg') }}" alt="">
@@ -8,15 +8,67 @@
   </p>
 
   @php
-    $base = [
-      'image' => asset('img/paquete.svg'),
-      'description' => 'consectetur adip isicing elit, sed doei usmod tempor incidi dunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nos-trud exercitation.',
-    ];
-    $products = collect()->range(1, 4)
-      ->map(fn ($value) => [
-        ...$base,
-        'title' => "Hidratante $value",
-      ]);
+    // $base = [
+    //   'image' => asset('img/paquete.svg'),
+    //   'description' => 'consectetur adip isicing elit, sed doei usmod tempor incidi dunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nos-trud exercitation.',
+    // ];
+    // $products = collect()->range(1, 4)
+    //   ->map(fn ($value) => [
+    //     ...$base,
+    //     'title' => "Hidratante $value",
+    //   ]);
+    //   $products[0]['items']=[null];
+      $products = [
+        [
+            'title' => 'RENACER',
+            'description' => 'Este tratamiento básico te ayudará a reponer líquidos y electrolitos de forma rápida y eficiente.',
+            'items'=>[
+                // '•	Obtendrá todos los beneficios del paquete RENACER.',
+                // '•	Elección de medicamento analgésico',
+                // '•	Medicamento para las náuseas.'
+            ],
+            'image' =>asset('img/paquete.svg')
+        ],
+        [
+            'title' => 'RE-POTENCIALIZATE',
+            'description' => 'Este paquete viene acompañado de varios síntomas: Dolor de cabeza Nauseas malestar general.
+            ',
+            'items'=>[
+                '•	Obtendrá todos los beneficios del paquete RENACER.',
+                '•	Elección de medicamento analgésico',
+                '•	Medicamento para las náuseas.'
+            ],
+            'image' =>asset('img/paquete.svg')
+        ],
+        [
+            'title' => 'GUAYABO FULL',
+            'description' => 'Este paquete viene acompañado de varios síntomas: Dolor de cabeza Nauseas malestar general y diarrea.',
+            'items'=>[
+                '•	Elección de medicamento analgésico.',
+                '•	Medicamento para las náuseas.',
+                '•	Protector gástrico',
+                '•	Electrolitos',
+            ],
+            'image' =>asset('img/paquete.svg')
+        ],
+        [
+            'title' => 'RESURECCION',
+            'description' => 'Este es nuestro paquete más completo y eficiente para recuperar en el menor tiempo posible a nuestros pacientes.
+            viene acompañado de varios síntomas: Dolor de cabeza, Nauseas, malestar general, acidez gástrica, reflujo y fatiga o molidera.
+            ',
+            'items'=>[
+                '• Obtendrá todos los beneficios de los paquetes GUAYABO FULL y
+                    RESURECCION en 45 a 50 minutos estarás listo para la siguiente rumba.
+                ',
+                '•	Elección de medicamento analgésico ',
+                '•	Medicamento para las náuseas.',
+                '•	Protector gástrico.',
+                '•	Electrolitos.',
+                '•	Consume levanta muertos.',
+            ],
+            'image' =>asset('img/paquete.svg')
+        ],
+      ];
   @endphp
 
   <div class="grid">
@@ -27,12 +79,19 @@
         </div>
         <div class="body">
           {{ $product['description'] }}
+          <br><br>
+            @foreach ($product['items'] as $item )
+            <br>
+            {{$item}}
+            <br>
+            @endforeach
         </div>
         <div
           class="image"
           style="background-image: url({{ $product['image'] }})"
         ></div>
-        <button>Cotizar</button>
+        <button onclick="window.open(
+        'https://api.whatsapp.com/send?phone=%2B57{{$telefono}}&text={{$mensaje}}%20Sobre%20el%20paquete%20{{$product['title']}}&type=phone_number&app_absent=0','_blank')">Cotizar</button>
       </div>
     @endforeach
   </div>

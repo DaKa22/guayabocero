@@ -1,6 +1,6 @@
 <header class="header">
   <div class="logo">
-    <img src="{{ asset('img/logo.svg') }}" alt="">
+    <img src="{{ asset('img/logo_horizontal.svg') }}" alt="">
   </div>
   <div class="navigation">
     @foreach ($navigation as $navigation)
@@ -18,7 +18,9 @@
 @push('styles')
   <style>
     header.header .logo {
-      width: 6rem;
+      width: 12rem;
+      /* padding-top: 2rem;
+      margin-left: 6rem; */
     }
 
     header.header {

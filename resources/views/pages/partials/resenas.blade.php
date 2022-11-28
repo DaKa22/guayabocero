@@ -1,4 +1,4 @@
-<section class="resenas">
+<section class="resenas" id="resenas">
   <h1 class="header-title">Reseñas</h1>
   <span class="header-subtitle">
     Nos esforzamos por brindarte un servicio de alta calidad en la comodidad de tu casa
@@ -20,7 +20,7 @@
       <div class="comment-body">
           consectetur adip isicing elit, sed do ei usmod tempor incidi dunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation
           <br>
-          Sin duda, el mejor remedio para quitar la resaca rápido efectivo y seguro... 
+          Sin duda, el mejor remedio para quitar la resaca rápido efectivo y seguro...
           <b>LA RECOMIENDO</b>
       </div>
     </div>

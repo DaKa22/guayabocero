@@ -1,6 +1,6 @@
-<a 
-  href="https://api.whatsapp.com/send?phone={{$telefono}}&text={{$mensaje}}&type=phone_number&app_absent=1" 
-  class="icon-whatsapp" 
+<a
+  href="https://api.whatsapp.com/send?phone=%2B57{{$telefono}}&text={{$mensaje}}&type=phone_number&app_absent=0"
+  class="icon-whatsapp"
   target="_blank"
 >
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">

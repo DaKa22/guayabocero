@@ -1,7 +1,7 @@
-<section class="about-us">
+<section class="about-us" id="quienes-somos">
   <div class="grid">
     <div class="arrow">
-      <embed src="{{ asset('img/circle.svg') }}" alt="">
+      <embed src="{{ asset('img/logo.svg') }}" alt="">
     </div>
     <aside>
       <div class="title">
@@ -58,7 +58,7 @@
     section.about-us .grid .arrow embed {
       width: 19rem;
       padding-top: 2rem;
-      margin-left: -6rem;
+      margin-left: 6rem;
     }
 
 
