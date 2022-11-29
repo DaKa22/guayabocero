@@ -13,16 +13,13 @@
       </a>
     @endforeach
   </div>
+  <div class="navigation-mobile">
+    <img src="{{ asset('img/menu.svg') }}" alt="">
+  </div>
 </header>
 
 @push('styles')
   <style>
-    header.header .logo {
-      width: 12rem;
-      /* padding-top: 2rem;
-      margin-left: 6rem; */
-    }
-
     header.header {
       display: flex;
       justify-content: space-between;
@@ -31,12 +28,39 @@
       padding-bottom: 1rem;
       padding-left: 3rem;
       padding-right: 3rem;
+      width: 100%;
+    }
+
+    @media(min-width: 600px) {
+      header.header {
+        width: auto;
+      }
     }
 
     header.header .navigation {
-      display: flex;
-      gap: 1rem;
-      font-size: 1.3rem;
+      display: none;
+    }
+
+    @media(min-width: 600px) {
+      header.header .navigation {
+        display: flex;
+        gap: 1rem;
+        font-size: 1.3rem;
+      }
+    }
+
+    header.header .navigation-mobile {
+      width: 2rem;
+    }
+
+    @media(min-width: 600px) {
+      header.header .navigation-mobile {
+        display: none;
+      }
+    }
+
+    header.header .logo {
+      width: 12rem;
     }
 
     header.header .navigation a {

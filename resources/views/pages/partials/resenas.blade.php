@@ -33,39 +33,79 @@
 @push('styles')
   <style>
     .resenas {
-      padding-top: 6rem;
-      padding-bottom: 6rem;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    @media(min-width: 600px) {
+      .resenas {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+      }
     }
 
     .resenas .header-title {
-      font-size: 4rem;
+      font-size: 2.5rem;
       text-align: center;
       margin: 0;
       text-transform: uppercase;
     }
+
+    @media(min-width: 600px) {
+      .resenas .header-title {
+        font-size: 4rem;
+      }
+    }
     .resenas .header-subtitle {
       display: flex;
-      margin-top: -.5rem;
+      margin-top: 1rem;
       justify-content: center;
+      text-align: center;
+    }
+
+    @media(min-width: 600px) {
+      .resenas .header-subtitle {
+        font-size: 2rem;
+        
+      }
     }
 
     .resenas .best-comments {
-      margin-top: 8rem;
+      margin-top: 3rem;
       position: relative;
     }
 
+    @media(min-width: 600px) {
+      .resenas .best-comments {
+        margin-top: 8rem;
+      }
+    }
+
     .resenas .comment-title {
-      font-size: 4rem;
+      font-size: 2rem;
       text-align: center;
       color: var(--color-magenta);
-      margin-bottom: 0;
+      margin-bottom: 1rem;
+    }
+
+    @media(min-width: 600px) {
+      .resenas .comment-title {
+        font-size: 4rem;
+        margin-bottom: 0;
+      }
     }
 
     .resenas .container-star {
       display: flex;
       justify-content: center;
       column-gap: .5rem;
-      padding-bottom: 3rem
+      padding-bottom: 1rem;
+    }
+
+    @media(min-width: 600px) {
+      .resenas .container-star {
+        padding-bottom: 3rem;
+      }
     }
 
     .resenas .star {
@@ -77,9 +117,17 @@
     }
 
     .resenas .comment-body {
-      text-align: center;
-      max-width: 29rem;
       margin: auto;
+      max-width: 90%;
+      text-align: justify;
+    }
+
+    @media(min-width: 600px) {
+      .resenas .comment-body {
+        font-size: 1.5rem;
+        text-align: center;
+        max-width: 29rem;
+      }
     }
 
     .resenas .arrow-left, .resenas .arrow-right {
@@ -89,6 +137,13 @@
       top: 0;
       bottom: 0;
       margin: auto;
+      display: none;
+    }
+
+    @media(min-width: 600px) {
+      .resenas .arrow-left, .resenas .arrow-right {
+        display: block;
+      }
     }
 
     .resenas .arrow-left {

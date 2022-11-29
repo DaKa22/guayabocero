@@ -9,6 +9,10 @@
   --color-white: #fff;
   --color-background: #e1e1e1;
   --color-green: #25d366;
+  --screen-xs: 600px;
+  --screen-sm: 960px;
+  --screen-md: 1280px;
+  --screen-lg: 1920px;
 }
 
 html {

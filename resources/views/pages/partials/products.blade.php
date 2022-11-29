@@ -90,34 +90,89 @@
           class="image"
           style="background-image: url({{ $product['image'] }})"
         ></div>
-        <button onclick="window.open(
-        'https://api.whatsapp.com/send?phone=%2B57{{$telefono}}&text={{$mensaje}}%20Sobre%20el%20paquete%20{{$product['title']}}&type=phone_number&app_absent=0','_blank')">Cotizar</button>
+        <button 
+          onclick="
+            window.open(
+              'https://api.whatsapp.com/send?phone=%2B57{{$telefono}}&text={{$mensaje}}%20Sobre%20el%20paquete%20{{$product['title']}}&type=phone_number&app_absent=0',
+              '_blank'
+            )
+          "
+        >Cotizar</button>
       </div>
     @endforeach
+  </div>
+
+  <div class="header-mobile">
+    <h1>
+      <span>Paquetes para el </span>
+      <img src="{{ asset('img/text-guayabo-2.svg') }}" alt="">
+    </h1>
+    <p class="sub-title">
+      Cada persona padece el guayabo de diferente forma. Por eso tenemos varias opcines para los síntomas que puedas tener.
+    </p>
   </div>
 </section>
 
 @push('styles')
   <style>
     section.products {
+      padding-top: 1rem;
       width: 100%;
-      padding-top: 5rem;
       background-image: url("{{ asset('img/background-products.svg') }}");
       background-size: cover;
       background-repeat: no-repeat;
-      background-position-y: -2.1rem;
+      background-position-y: center;
       color: var(--color-white);
-      padding-bottom: 13rem;
+      padding-bottom: 1rem;
+    }
+
+    @media(min-width: 600px) {
+      section.products {
+        padding-top: 5rem;
+        padding-bottom: 13rem;
+        background-position-y: -2.1rem;
+      }
     }
 
     section.products h1 {
-      display: flex;
+      display: none;
       justify-content: center;
       text-align: center;
       font-size: 4rem;
       font-weight: 500;
       text-transform: uppercase;
       margin-bottom: .5rem;
+      color: #fff;
+    }
+
+    @media(min-width: 600px) {
+      section.products h1 {
+        display: flex;
+      }
+    }
+    section.products .header-mobile {
+      display: block;
+    }
+
+    @media(min-width: 600px) {
+      section.products .header-mobile {
+        display: none;
+      }
+    }
+
+    section.products .header-mobile h1 {
+      font-size: 2rem;
+      display: block;
+    }
+
+    section.products .header-mobile h1 span {
+      margin: 0;
+    }
+
+    section.products .header-mobile h1 img {
+      margin: 0;
+      margin-top: .5rem;
+      width: 9rem;
     }
 
     section.products h1 img {
@@ -133,16 +188,29 @@
     section.products p.sub-title {
       margin: 0 auto;
       max-width: 50rem;
+      display: none;
       font-size: 1.3rem;
+    }
+
+    @media(min-width: 600px) {
+      section.products p.sub-title {
+        display: block;
+      }
     }
 
     section.products .grid {
       padding-top: 4rem;
       padding-left:  6rem;
       padding-right: 6rem;
-      display: grid;
+      display: none;
       grid-template-columns: repeat(4, 1fr);
       column-gap: 3rem;
+    }
+
+    @media(min-width: 600px) {
+      section.products .grid {
+        display: grid;
+      }
     }
 
     section.products .grid > div {
