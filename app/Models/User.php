@@ -19,9 +19,13 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'phone',
         'email',
-        'password',
+        'status',
     ];
+    public function reviews(){
+        return $this->hasMany(review::class,'users_id');
+    }
 
     /**
      * The attributes that should be hidden for serialization.
