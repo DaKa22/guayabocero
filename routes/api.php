@@ -18,5 +18,5 @@ use Illuminate\Support\Facades\Route;
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //     return $request->user();
 // });
-Route::get('/index', [ReviewController::class, 'index'])->name('index');
-Route::post('/storage', [ReviewController::class, 'storage'])->name('storage');
+Route::get('index', [ReviewController::class, 'index']);
+Route::post('store', [ReviewController::class, 'store']);
