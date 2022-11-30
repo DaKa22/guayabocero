@@ -30,11 +30,4 @@ return [
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
-
-    'recaptcha' => [
-        // 'key' => '6LfFtUMjAAAAAJ4JM8kbgqcNoMXuREcXzbZ-SNUw',
-        // 'secret' => '6LfFtUMjAAAAABF4rASmdyw4qvMzH_IcApWusX6G'
-        'key' => '6LcpiV4gAAAAANUEST1-hCe9YZFuXRFdNRp1RR9h', //local
-        'secret' => '6LcpiV4gAAAAAF3NRpASApG54I8UZ0efcRqJWOrM' //local
-    ],
 ];

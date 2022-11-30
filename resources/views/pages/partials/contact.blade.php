@@ -1,37 +1,40 @@
 <section class="contact">
-    <div class="form">
-        <form class="contact-form" id="contact_form" action="{{ route('store')}}" method="POST" onsubmit="return getForm(this)">
-            @csrf
-            <h1 class="title-1">COMPARTE TU</h1>
-            <h1 class="title-2">EXPERIENCIA</h1>
-            <div class="container">
-                <input class="field" name="name" type="text" placeholder="NOMBRE COMPLETO" required>
-                <input class="field" name="phone" type="number"  placeholder="TELÉFONO DE CONTACTO" min="3000000000" max="3999999999" required>
-                <input class="field" name="star" type="number" min="1" max="5" placeholder="NUMERO DE ESTRELLAS" required>
-                {{-- <div class="container-star">
-                    @foreach (collect()->range(1,5) as $item)
-                    <div class="star">
-                        <img src="{{ asset('img/star.svg') }}" alt="">
-                    </div>
-                    @endforeach
-                </div> --}}
-                <textarea
-                    class="field"
-                    name="review"
-                    cols="30"
-                    rows="10"
-                    minlength="10"
-                    placeholder="ESCRIBE TU EXPERIENCIA ..."
-                    required
-                ></textarea>
-                <button type="submit" class="send">ACEPTAR</button>
+  <div class="form">
+    <form 
+      class="contact-form"
+      id="contact_form" 
+    >
+      @csrf
+      <h1 class="title-1">COMPARTE TU</h1>
+      <h1 class="title-2">EXPERIENCIA</h1>
+      <div class="container">
+        <input id="name"  class="field" type="text" placeholder="NOMBRE COMPLETO" required>
+        <input id="phone" class="field" type="number"  placeholder="TELÉFONO DE CONTACTO" min="3000000000" max="3999999999" required>
+        <input id="star"  class="field" type="number" min="1" max="5" placeholder="NUMERO DE ESTRELLAS" required>
+        {{-- <div class="container-star">
+            @foreach (collect()->range(1,5) as $item)
+            <div class="star">
+                <img src="{{ asset('img/star.svg') }}" alt="">
             </div>
-            <div>
-                <p class="form-message"></p>
-            </div>
-        </form>
-    </div>
-    <div class="bg-contact"></div>
+            @endforeach
+        </div> --}}
+        <textarea
+          class="field"
+          id="review"
+          cols="30"
+          rows="10"
+          minlength="10"
+          placeholder="ESCRIBE TU EXPERIENCIA ..."
+          required
+        ></textarea>
+        <button type="submit" class="send">ACEPTAR</button>
+      </div>
+      <div>
+        <p class="form-message"></p>
+      </div>
+    </form>
+  </div>
+  <div class="bg-contact"></div>
 </section>
 
 @push('styles')
@@ -162,4 +165,54 @@
     }
 
   </style>
+@endpush
+
+
+@push('scripts')
+<script>
+  const route = "{{ route('store') }}";
+  const keyRecaptcha = "{{ env('KEY_RECAPTCHA') }}";
+
+  const formContact = document.getElementById('contact_form')
+  formContact.addEventListener('submit', (e) => {
+    e.preventDefault()
+
+    const name = document.getElementById('name').value
+    const phone = document.getElementById('phone').value
+    const star = document.getElementById('star').value
+    const review = document.getElementById('review').value
+
+    if (!(name && phone && star && review)) return alert('verifica los campos')
+
+    const data = {
+      name,
+      phone,
+      star,
+      review,
+      action: 'store'
+    }
+    
+    grecaptcha.ready(async() => {
+      const token = await grecaptcha.execute(keyRecaptcha, { action: 'store' })
+      data.token = token
+      saveComment(data)
+    })
+  })
+
+  const saveComment = async (datos) => {
+    const csrf = document.querySelector('meta[name="csrf_token"]').getAttribute('content');
+    const res = await fetch(route, {
+      headers: {
+        'X-CSRF-Token': csrf,
+        'Content-Type': 'application/json',
+      },
+      method: 'POST',
+      body: JSON.stringify(datos)
+    })
+    const message = await res.json()
+
+    if (res.status == 500) return alertify.error(message)
+    alertify.success(message);
+  }
+</script>
 @endpush
