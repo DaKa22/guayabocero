@@ -107,7 +107,7 @@
         section.products {
             padding-top: 1rem;
             width: 100%;
-            height: 217em;
+            height: 240em;
             background-image: url("{{ asset('img/background-products.svg') }}");
             background-size: cover;
             background-repeat: no-repeat;
