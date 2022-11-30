@@ -229,6 +229,7 @@
     section.products .grid .body {
       text-align: justify;
       margin-bottom: 4rem;
+      min-height: 22.8rem;
     }
 
     section.products .grid .image {

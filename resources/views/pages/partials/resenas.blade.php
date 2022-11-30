@@ -5,28 +5,27 @@
   </span>
 
   <section class="best-comments">
-    <div class="arrow-left">
+    {{-- <div class="arrow-left">
       <img src="{{ asset('img/arrow-down.svg') }}" alt="">
-    </div>
-    <div class="comment">
-      <h1 class="comment-title">DANIEL ROMERO</h1>
-      <div class="container-star">
-        @foreach (collect()->range(1,5) as $item)
-          <div class="star">
-            <img src="{{ asset('img/star.svg') }}" alt="">
-          </div>
-        @endforeach
+    </div> --}}
+    @foreach ($reviews as $review)
+      <div class="comment">
+        <h1 class="comment-title">{{ $review->users->name }}</h1>
+        <div class="container-star">
+          @foreach (collect()->range(1,$review->star) as $item)
+            <div class="star">
+              <img src="{{ asset('img/star.svg') }}" alt="">
+            </div>
+          @endforeach
+        </div>
+        <div class="comment-body">
+          {!! $review->review !!}
+        </div>
       </div>
-      <div class="comment-body">
-          consectetur adip isicing elit, sed do ei usmod tempor incidi dunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation
-          <br>
-          Sin duda, el mejor remedio para quitar la resaca rápido efectivo y seguro...
-          <b>LA RECOMIENDO</b>
-      </div>
-    </div>
-    <div class="arrow-right">
+    @endforeach
+    {{-- <div class="arrow-right">
       <img src="{{ asset('img/arrow-down.svg') }}" alt="">
-    </div>
+    </div> --}}
   </section>
 </section>
 
@@ -161,5 +160,16 @@
     .resenas .arrow-right img {
       transform: rotate(-90deg)
     }
+    
   </style>
+@endpush
+
+@push('scripts')
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      $('.best-comments').slick({
+        arrows: true
+      });
+    })
+  </script>
 @endpush
