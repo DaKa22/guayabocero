@@ -21,7 +21,7 @@
       position: relative;
     }
 
-    
+
 
     section.banner-main .content-bottom-left {
       position: absolute;
@@ -31,8 +31,8 @@
       padding-left: 0;
       padding-right: 2rem;
       padding-bottom: 2rem;
-      transform: rotate(-25deg);
-      font-size: 1.4rem;
+      transform: rotate(-10deg);
+      font-size: 1.7rem;
       text-transform: uppercase;
       font-weight: 500;
     }
@@ -47,7 +47,7 @@
       }
     }
 
-    
+
 
     section.banner-main .content-bottom-left .bg-dark {
       position: relative;

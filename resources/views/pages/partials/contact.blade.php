@@ -1,8 +1,8 @@
 <section class="contact">
   <div class="form">
-    <form 
+    <form
       class="contact-form"
-      id="contact_form" 
+      id="contact_form"
     >
       @csrf
       <h1 class="title-1">COMPARTE TU</h1>
@@ -191,12 +191,18 @@
       review,
       action: 'store'
     }
-    
+
     grecaptcha.ready(async() => {
       const token = await grecaptcha.execute(keyRecaptcha, { action: 'store' })
       data.token = token
       saveComment(data)
+
     })
+    document.getElementById('name').value=''
+    document.getElementById('phone').value=''
+    document.getElementById('star').value=''
+    document.getElementById('review').value=''
+
   })
 
   const saveComment = async (datos) => {
@@ -213,6 +219,7 @@
 
     if (res.status == 500) return alertify.error(message)
     alertify.success(message);
+
   }
 </script>
 @endpush

@@ -19,7 +19,7 @@
           @endforeach
         </div>
         <div class="comment-body">
-          {!! $review->review !!}
+            ❝{!! $review->review !!}❞
         </div>
       </div>
     @endforeach
@@ -65,7 +65,7 @@
     @media(min-width: 600px) {
       .resenas .header-subtitle {
         font-size: 2rem;
-        
+
       }
     }
 
@@ -160,7 +160,7 @@
     .resenas .arrow-right img {
       transform: rotate(-90deg)
     }
-    
+
   </style>
 @endpush
 
@@ -168,7 +168,7 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       $('.best-comments').slick({
-        arrows: true
+        arrows: false
       });
     })
   </script>
