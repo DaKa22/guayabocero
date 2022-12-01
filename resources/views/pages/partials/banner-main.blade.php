@@ -32,12 +32,12 @@
       padding-right: 2rem;
       padding-bottom: 2rem;
       transform: rotate(-10deg);
-      font-size: 1.7rem;
+      font-size: 1.6rem;
       text-transform: uppercase;
       font-weight: 500;
     }
 
-    @media(min-width: 600px) {
+    @media(min-width: 800px) {
       section.banner-main .content-bottom-left {
         padding-left: 2rem;
         padding-right: 2rem;
@@ -55,7 +55,7 @@
       color: var(--color-white);
     }
 
-    @media(min-width: 600px) {
+    @media(min-width: 800px) {
       section.banner-main .content-bottom-left .bg-dark {
         padding-left: 4rem;
       }
@@ -72,7 +72,7 @@
       z-index: -1;
     }
 
-    @media(min-width: 600px) {
+    @media(min-width: 800px) {
       section.banner-main .content-bottom-left .bg-dark::after {
         width: 31rem;
       }

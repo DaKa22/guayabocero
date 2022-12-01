@@ -36,7 +36,7 @@
       padding-bottom: 2rem;
     }
 
-    @media(min-width: 600px) {
+    @media(min-width: 800px) {
       .resenas {
         padding-top: 6rem;
         padding-bottom: 6rem;
@@ -50,7 +50,7 @@
       text-transform: uppercase;
     }
 
-    @media(min-width: 600px) {
+    @media(min-width: 800px) {
       .resenas .header-title {
         font-size: 4rem;
       }
@@ -62,7 +62,7 @@
       text-align: center;
     }
 
-    @media(min-width: 600px) {
+    @media(min-width: 800px) {
       .resenas .header-subtitle {
         font-size: 2rem;
 
@@ -74,7 +74,7 @@
       position: relative;
     }
 
-    @media(min-width: 600px) {
+    @media(min-width: 800px) {
       .resenas .best-comments {
         margin-top: 8rem;
       }
@@ -87,7 +87,7 @@
       margin-bottom: 1rem;
     }
 
-    @media(min-width: 600px) {
+    @media(min-width: 800px) {
       .resenas .comment-title {
         font-size: 4rem;
         margin-bottom: 0;
@@ -101,7 +101,7 @@
       padding-bottom: 1rem;
     }
 
-    @media(min-width: 600px) {
+    @media(min-width: 800px) {
       .resenas .container-star {
         padding-bottom: 3rem;
       }
@@ -121,7 +121,7 @@
       text-align: justify;
     }
 
-    @media(min-width: 600px) {
+    @media(min-width: 800px) {
       .resenas .comment-body {
         font-size: 1.5rem;
         text-align: center;
@@ -139,7 +139,7 @@
       display: none;
     }
 
-    @media(min-width: 600px) {
+    @media(min-width: 800px) {
       .resenas .arrow-left, .resenas .arrow-right {
         display: block;
       }

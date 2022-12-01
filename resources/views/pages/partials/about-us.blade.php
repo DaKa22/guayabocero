@@ -54,7 +54,7 @@
     section.about-us {
     }
 
-    @media(min-width: 600px) {
+    @media(min-width: 800px) {
       section.about-us {
         padding-top: 2rem;
       }
@@ -77,7 +77,7 @@
       display: none;
     }
 
-    @media(min-width: 600px) {
+    @media(min-width: 800px) {
       section.about-us .grid {
         padding-top: 3rem;
         padding-bottom: 4rem;
@@ -124,7 +124,7 @@
       display: none;
     }
 
-    @media(min-width: 600px) {
+    @media(min-width: 800px) {
       section.about-us .gallery {
         display: flex;
         padding-top: 2rem;
@@ -158,10 +158,10 @@
       background-position-x: center;
       background-position-y: 9rem;
       z-index: -1;
-      opacity: .2;
+      opacity: .1;
     }
 
-    @media(min-width: 600px) {
+    @media(min-width: 800px) {
       section.about-us .grid-mobile {
         display: none;
       }

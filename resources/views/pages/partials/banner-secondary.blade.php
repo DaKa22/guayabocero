@@ -39,7 +39,7 @@
       margin-top: 1.5rem;
     }
 
-    @media(min-width: 600px) {
+    @media(min-width: 800px) {
       section.banner-secondary .header {
         margin-top: auto;
         max-width: 52rem;
@@ -52,7 +52,7 @@
       text-align: center;
     }
 
-    @media(min-width: 600px) {
+    @media(min-width: 800px) {
       section.banner-secondary .header div {
         display: block;
       }
@@ -68,7 +68,7 @@
       position: relative;
     }
 
-    @media(min-width: 600px) {
+    @media(min-width: 800px) {
       section.banner-secondary .body {
         display: block;
       }
@@ -88,7 +88,7 @@
       background-color: #000;
     }
 
-    @media(min-width: 600px) {
+    @media(min-width: 800px) {
       section.banner-secondary .body-mobile {
         display: none;
       }

@@ -55,7 +55,7 @@
       grid-template-columns: 1fr;
     }
 
-    @media(min-width: 600px) {
+    @media(min-width: 800px) {
       .contact {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -73,7 +73,7 @@
       margin-bottom: 4rem;
     }
 
-    @media(min-width: 600px) {
+    @media(min-width: 800px) {
       .contact .container {
         max-width: 35rem;
         margin-bottom: 8rem;
@@ -86,7 +86,7 @@
       margin: 0;
     }
 
-    @media(min-width: 600px) {
+    @media(min-width: 800px) {
       .contact .title-1, .contact .title-2 {
         font-size: 6rem;
       }
@@ -97,7 +97,7 @@
       margin-top: -0.5rem;
     }
 
-    @media(min-width: 600px) {
+    @media(min-width: 800px) {
       .contact .title-2 {
         margin-top: -1.5rem;
       }
@@ -134,7 +134,7 @@
       padding-left: 1rem;
     }
 
-    @media(min-width: 600px) {
+    @media(min-width: 800px) {
       .contact .field::placeholder {
         padding-left: 3rem;
       }
@@ -158,7 +158,7 @@
       display: none;
     }
 
-    @media(min-width: 600px) {
+    @media(min-width: 800px) {
       .contact .bg-contact {
         display: block;
       }

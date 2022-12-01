@@ -6,7 +6,7 @@
 //   $telefono = '3222266461'; //TEST
   $telefono = '3163339407'; //PROD
   $mensaje = '%20Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n.';
-  $navigation = [
+  $navigations = [
     [
       'name' => 'Home',
       'route' => route('home').'#home',

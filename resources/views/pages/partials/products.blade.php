@@ -9,16 +9,6 @@
     </p>
 
     @php
-        // $base = [
-        //   'image' => asset('img/paquete.svg'),
-        //   'description' => 'consectetur adip isicing elit, sed doei usmod tempor incidi dunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nos-trud exercitation.',
-        // ];
-        // $products = collect()->range(1, 4)
-        //   ->map(fn ($value) => [
-        //     ...$base,
-        //     'title' => "Hidratante $value",
-        //   ]);
-        //   $products[0]['items']=[null];
         $products = [
             [
                 'title' => 'RENACER',
@@ -32,25 +22,25 @@
             ],
             [
                 'title' => 'RE-POTENCIALIZATE',
-                'description' => 'Este paquete viene acompañado de varios síntomas: Dolor de cabeza Nauseas malestar general.
+                'description' => 'Este paquete viene acompañado de varios síntomas: Dolor de cabeza <span> MALESTAR GENERAL</span>.
             ',
-                'items' => ['•	Obtendrá todos los beneficios del paquete RENACER.', '•	Elección de medicamento analgésico', '•	Medicamento para las náuseas.'],
+                'items' => ['•	Obtendrá todos los beneficios del paquete <span> RENACER</span>.', '•	Elección de medicamento analgésico', '•	Medicamento para las náuseas.'],
                 'image' => asset('img/paquete.svg'),
             ],
             [
                 'title' => 'GUAYABO FULL',
-                'description' => 'Este paquete viene acompañado de varios síntomas: Dolor de cabeza Nauseas malestar general y diarrea.',
+                'description' => 'Este paquete viene acompañado de varios síntomas: Dolor de cabeza <span>NAUSEAS MALESTAR GENERAL Y DIARREA</span>.',
                 'items' => ['•	Elección de medicamento analgésico.', '•	Medicamento para las náuseas.', '•	Protector gástrico', '•	Electrolitos'],
                 'image' => asset('img/paquete.svg'),
             ],
             [
                 'title' => 'RESURECCION',
-                'description' => 'Este es nuestro paquete más completo y eficiente para recuperar en el menor tiempo posible a nuestros pacientes.
+                'description' => 'Este es nuestro paquete más completo y eficiente para <span>RECUPERAR EN MENOR TIEMPO POSIBLE</span> a nuestros pacientes.
             viene acompañado de varios síntomas: Dolor de cabeza, Nauseas, malestar general, acidez gástrica, reflujo y fatiga o molidera.
             ',
                 'items' => [
-                    '• Obtendrá todos los beneficios de los paquetes GUAYABO FULL y
-                    RESURECCION en 45 a 50 minutos estarás listo para la siguiente rumba.
+                    '• Obtendrá todos los beneficios de los paquetes <span>GUAYABO FULL Y
+                    RESURECCION</span> en 45 a 50 minutos estarás listo para la siguiente rumba.
                 ',
                     '•	Elección de medicamento analgésico ',
                     '•	Medicamento para las náuseas.',
@@ -78,16 +68,21 @@
                 <div class="header">
                     {{ $product['title'] }}
                 </div>
+                <div class="image" style="background-image: url({{ $product['image'] }})"></div>
                 <div class="body">
-                    {{ $product['description'] }}
-                    <br><br>
+                    {!! $product['description'] !!}
+                    @if ($product['items'])
+                        <h4 style="color: var(--color-magenta)">INCLUYE:</h4>
+
+                    @endif
+
                     @foreach ($product['items'] as $item)
                         <br>
-                        {{ $item }}
+                        {!! $item !!}
                         <br>
                     @endforeach
                 </div>
-                <div class="image" style="background-image: url({{ $product['image'] }})"></div>
+
                 <button
                     onclick="
             window.open(
@@ -107,7 +102,7 @@
         section.products {
             padding-top: 1rem;
             width: 100%;
-            height: 240em;
+            height: 260em;
             background-image: url("{{ asset('img/background-products.svg') }}");
             background-size: cover;
             background-repeat: no-repeat;
@@ -116,7 +111,7 @@
             padding-bottom: 1rem;
         }
 
-        @media(min-width: 600px) {
+        @media(min-width: 800px) {
             section.products {
                 height: 100%;
                 padding-top: 5rem;
@@ -136,7 +131,7 @@
             color: #fff;
         }
 
-        @media(min-width: 600px) {
+        @media(min-width: 800px) {
             section.products h1 {
                 display: flex;
             }
@@ -147,7 +142,7 @@
             padding-top: 5rem;
         }
 
-        @media(min-width: 600px) {
+        @media(min-width: 800px) {
             section.products .header-mobile {
                 display: none;
             }
@@ -155,6 +150,7 @@
 
         section.products .header-mobile h1 {
             font-size: 2rem;
+            margin: 1.67em 0;
             display: block;
         }
 
@@ -185,7 +181,7 @@
             font-size: 1.3rem;
         }
 
-        @media(min-width: 600px) {
+        @media(min-width: 800px) {
             section.products p.sub-title {
                 display: block;
             }
@@ -193,15 +189,17 @@
 
         section.products .grid {
             padding-top: 4rem;
-            padding-left: 6rem;
-            padding-right: 6rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
             display: grid;
             grid-template-columns: repeat(1, 1fr);
             column-gap: 3rem;
         }
 
-        @media(min-width: 600px) {
+        @media(min-width: 800px) {
             section.products .grid {
+                padding-left: 3rem;
+                padding-right: 3rem;
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
             }
@@ -216,18 +214,25 @@
             text-align: center;
             color: var(--color-magenta);
             font-weight: 500;
-            font-size: 1.4rem;
+            font-size: 2rem;
             margin-bottom: .5rem;
             text-transform: uppercase;
+        }
+        @media(min-width: 800px) {
+            section.products .grid .header {
+                font-size: 1.6rem;
+            }
         }
 
         section.products .grid .body {
             text-align: justify;
             margin-bottom: 4rem;
         }
-        @media(min-width: 600px) {
+        @media(min-width: 800px) {
             section.products .grid .body {
             min-height: 22.8rem;
+            text-align: left;
+
 
             }
         }
@@ -237,6 +242,8 @@
             background-size: cover;
             background-repeat: no-repeat;
             margin: auto;
+            margin-top: 3rem;
+            margin-bottom: 2rem;
         }
 
         section.products .grid button {
@@ -258,6 +265,9 @@
         section.products .grid button:hover {
             background-color: var(--color-white);
             color: var(--color-dark);
+        }
+        section.products .grid span {
+            color: var(--color-magenta);
         }
     </style>
 @endpush
