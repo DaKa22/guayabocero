@@ -14,33 +14,28 @@
     @endforeach
   </div>
   <div class="navigation-mobile">
-    {{-- <img src="{{ asset('img/menu.svg') }}" alt=""> --}}
-    <input type="checkbox">
-    <i class="fas fa-bars"></i>
-    <i class="fas fa-times"></i>
-    <nav>
-        <ul>
-            <li>
-                @foreach ($navigations as $navigation)
-                <a
-                    href="{{ $navigation['route'] }}"
-                    class="{{ $navigation['active'] ? 'active' : '' }}"
-                    target="{{ $navigation['vinculo_externo'] ? '_blank' : '' }}"
-                >
-                    {{ $navigation['name'] }}
-                </a>
-                @endforeach
-            </li>
+    <img src="{{ asset('img/menu.svg') }}" alt="" id="open-menu">
+  </div>
+  <div class="navigation-mobile-wrapped" id="menu">
+    @foreach ($navigations as $key => $navigation)
+        <a
+            href="{{ $navigation['route'] }}"
+            class="{{ $navigation['active'] ? 'active' : '' }} {{ $key == 0 ? 'first' : '' }}"
+            target="{{ $navigation['vinculo_externo'] ? '_blank' : '' }}"
+            onclick="hideMenuMobile()"
+        >
+            {{ $navigation['name'] }}
+        </a>
+    @endforeach
 
-        </ul>
-    </nav>
+    <div class="close">
+        <img src="{{ asset('img/close.svg') }}" alt="" id="close-menu">
+    </div>
   </div>
 </header>
 
 @push('styles')
   <style>
-
-        /* menu test finish */
     header.header {
       display: flex;
       justify-content: space-between;
@@ -70,80 +65,6 @@
       }
     }
 
-    header.header .navigation-mobile {
-      /* width: 2rem; */
-      display: none;
-      width: 100% !important;
-        position: absolute !important;
-        /* display: flex !important; */
-        top: 0 !important;
-        z-index: 999 !important;
-        left: 0 !important;
-
-
-
-    }
-    header.header .navigation-mobile a {
-      /* width: 2rem; */
-
-        color: inherit;
-        text-decoration: none;
-        display: block;
-        padding: 10px 20px;
-        border-bottom: 2px solid #456789;
-        max-width: 200px;
-        background: #234567;
-        font-variant: small-caps;
-        text-shadow: 1px 1px black;
-        font-size: 32px !important;
-    padding: 25px !important;
-}
-
-
-    }
-    header.header .navigation-mobile input[type="checkbox"], header.header .navigation-mobile .fa-bars, header.header .navigation-mobile .fa-times {
-    position: absolute;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    right: 0;
-    top: 0;
-    width: 48px;
-    height: 48px;
-    }
-
-    header.header .navigation-mobile .fa-bars, header.header .navigation-mobile .fa-times {
-    font-size: 48px;
-    pointer-events: none;
-    }
-
-    header.header .navigation-mobile input[type="checkbox"] {
-    opacity: 0;
-    }
-
-    header.header .navigation-mobile {
-    color: white;
-    position: relative;
-    background: #123456;
-    min-height: 48px;
-    }
-
-    header.header .navigation-mobile nav {
-    display: none;
-    }
-
-    header.header .navigation-mobile input:checked ~ nav {
-    display: block;
-    }
-
-    header.header .navigation-mobile input:checked ~ .fa-bars {
-    display: none;
-    }
-
-    header.header .navigation-mobile input:not(:checked) ~ .fa-times {
-    display: none;
-    }
-
     @media(min-width: 800px) {
       header.header .navigation-mobile {
         display: none;
@@ -162,5 +83,64 @@
     header.header .navigation a.active {
       color: var(--color-pink);
     }
+
+    header.header .navigation-mobile img {
+        width: 2rem;
+    }
+
+    #menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-height: 100vh;
+      width: 100%;
+      z-index: 100;
+      /* justify-content: center; */
+      align-items: center;
+      background-color: #fff;
+      flex-direction: column;
+      transition: all ease-in-out 3s;
+    }
+
+    .navigation-mobile-wrapped a {
+        padding: .4rem;
+    }
+
+    .navigation-mobile-wrapped a.first {
+        margin-top: 12rem;
+    }
+
+    .navigation-mobile-wrapped .close {
+        margin-top: 12rem;
+    }
+
+
+    .navigation-mobile-wrapped .close img {
+        width: 2rem
+    }
+
   </style>
+@endpush
+
+
+@push('scripts')
+    <script>
+      const menu =  document.querySelector('#menu')
+      const openBtn =  document.querySelector('#open-menu')
+      const closeBtn =  document.querySelector('#close-menu')
+
+      openBtn.addEventListener('click', () => {
+        menu.style.display = 'flex'
+      })
+
+      closeBtn.addEventListener('click', (e) => {
+        menu.style.display = 'none'
+      })
+
+      const hideMenuMobile = () => {
+        menu.style.display = 'none'
+      }
+
+    </script>
 @endpush

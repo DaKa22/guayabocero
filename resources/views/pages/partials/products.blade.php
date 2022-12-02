@@ -68,7 +68,7 @@
                 <div class="header">
                     {{ $product['title'] }}
                 </div>
-                <div class="image" style="background-image: url({{ $product['image'] }})"></div>
+                <div class="image" style="background-image: url({{ $product['image'] }})" ></div>
                 <div class="body">
                     {!! $product['description'] !!}
                     @if ($product['items'])
