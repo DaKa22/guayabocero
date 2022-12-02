@@ -1,7 +1,7 @@
 <section class="banner-secondary">
   <div class="header">
     <span>Nuestro equipo orientador</span>
-    te administrará una mezcla de vitaminas, minerales, antioxidantes y medicamentos para
+    te sugerira una mezcla de vitaminas, minerales, antioxidantes y medicamentos para
     <div class="text-center">
       <span>eliminar tu guayabo</span>
       y otros síntomas.
