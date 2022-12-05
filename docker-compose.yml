@@ -1,0 +1,58 @@
+version: '3.5'
+services:
+  guayabocero:
+      build:
+        context: .
+        dockerfile: Dockerfile
+      image: 'guayabocero:latest'
+      container_name: guayabocero
+      volumes:
+         - '.:/var/www/html'
+      ports:
+      - 81:80
+      networks:
+          - network_privated
+      environment:
+          - DB_CONNECTION=mysql
+          - DB_HOST=mysql
+          - DB_PORT=3306
+          - DB_DATABASE=guayabo
+          - DB_USERNAME=guayabo
+          - DB_PASSWORD=guayabo
+
+  mysql:
+      container_name: guayabocero_mysql
+      image: mariadb:10.3
+      restart: always
+      volumes:
+          - db:/var/lib/mysql
+      environment:
+          - MYSQL_DATABASE=guayabo
+          - MYSQL_USER=guayabo
+          - MYSQL_PASSWORD=guayabo
+          - MYSQL_ROOT_PASSWORD=guayabo
+      networks:
+          - network_privated
+  phpmyadmin:
+      container_name: guayabocero_phpmyadmin
+      image: phpmyadmin/phpmyadmin
+      ports:
+          - '82:80'
+      links:
+          - mysql:mysql
+      environment:
+          - PMA_HOST=mysql
+          - PMA_ARBITRARY=1
+          - MYSQL_DATABASE=guayabo
+          - MYSQL_USER=guayabo
+          - MYSQL_PASSWORD=guayabo
+          - MYSQL_ROOT_PASSWORD=guayabo
+          - UPLOAD_LIMIT=910321860
+      networks:
+          - network_privated
+networks:
+    network_privated:
+        driver: bridge
+
+volumes:
+  db:
